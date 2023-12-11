@@ -45,7 +45,7 @@ int validInput()
     {
         std::cin.clear();
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        std::cout << "Virhe syotteessa. Syota NUMERO: ";
+        std::cout << "Syöte ei ole numero. Syyötä sopiva arvo: ";
         std::cin >> x;
     }
     return x;
@@ -205,6 +205,9 @@ int main() {
                         final = final_two_room + final_one_room;
                         final = final * night_amount;
                         final = final * salepercent;
+
+                        cout << "Huoneidenne määrä: " << taken_one_amount << " " << taken_two_amount << endl;
+                        cout << "Öiden määrä: " << night_amount << endl;
 
                         cout << "Varauksenne hinta " << final << " euroa." << endl;
                         system("pause");
